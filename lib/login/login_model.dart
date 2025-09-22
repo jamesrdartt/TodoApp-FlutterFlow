@@ -43,8 +43,8 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
       return 'Field is required';
     }
 
-    if (val.length < 7) {
-      return 'Requires at least 7 characters.';
+    if (val.length < 8) {
+      return 'Requires at least 8 characters.';
     }
 
     return null;
@@ -62,8 +62,8 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
       return 'Confirm Password... is required';
     }
 
-    if (val.length < 7) {
-      return 'Requires at least 7 characters.';
+    if (val.length < 8) {
+      return 'Requires at least 8 characters.';
     }
 
     return null;
