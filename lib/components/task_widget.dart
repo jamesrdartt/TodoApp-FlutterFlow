@@ -78,6 +78,11 @@ class _TaskWidgetState extends State<TaskWidget> {
                     safeSetState(() => _model.checkboxValue = newValue!);
                     if (newValue!) {
                       await widget.checkAction?.call();
+
+                      await widget.tasksDoc!.reference
+                          .update(createTasksRecordData(
+                        completed: true,
+                      ));
                     } else {
                       await widget.checkAction?.call();
                     }
